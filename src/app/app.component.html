@@ -1,0 +1,23 @@
+<!-- <p> chats</p>
+<ul>
+    <li class="text" *ngFor="let chat of chats | async ">
+        {{chat.mensaje}}
+    </li>
+</ul> -->
+
+<div class="container main-container">
+
+    <div class="col-md-12 text-end" *ngIf="service.usuario.uid">
+        <button class="btn btn-light" (click)="service.logout()"><mat-icon>enhanced_encryption</mat-icon>salir</button>
+    </div>
+    <!-- 
+    <div class="chat-window">
+        <app-chats></app-chats>
+
+    </div> -->
+
+    <!-- <app-login *ngIf="!service.usuario.uid"></app-login> -->
+
+    <app-messanger></app-messanger>
+
+</div>

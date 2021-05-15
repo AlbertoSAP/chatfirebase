@@ -1,0 +1,16 @@
+<h3>Chat</h3>
+<hr>
+<div class="app-mensajes" id="app-mensajes">
+
+    <div class="text-end" *ngFor="let chat of service.chats">
+        <div class="d-flex justify-content-end mb-4">
+            <span class="badge bg-success">Alberto</span>
+        </div>
+        <p class="msg_cotainer_send">{{chat.mensaje}}</p>
+    </div>
+
+
+</div>
+<div class="form-group">
+    <input class="form-control" type="text" name="mensaje" [(ngModel)]="mensaje" placeholder="Escriba aqui!!" (keyup.enter)="sendchat()">
+</div>
